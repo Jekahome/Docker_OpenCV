@@ -13,7 +13,7 @@ Show OpenCV version:
 Run camera:
 $ docker run --rm -it --env DISPLAY=$DISPLAY  --privileged \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
-    --name opencv_rep_ex_v3 -it jekshmek/test_cmake
+    --name opencv_rep_ex_v3 -it jekshmek/opencv_rep
     
 First run:    
 $ python camera.py 
