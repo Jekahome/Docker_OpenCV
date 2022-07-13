@@ -16,7 +16,7 @@ $ docker run --rm -it --env DISPLAY=$DISPLAY  --privileged \
     --name opencv_rep_ex_v3 -it jekshmek/opencv_rep
     
 First run:    
-$ python camera.py 
+$ python camera.py 2> .log_error
 
 Next run:
 $ python camera.py 
