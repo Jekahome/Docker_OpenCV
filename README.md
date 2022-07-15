@@ -1,7 +1,7 @@
 ## Install OpenCV from repositories
 
+### Build:
 ```
-Build:
 
     $ docker build -t jekshmek/opencv_rep --file Dockerfile .
 ```
