@@ -48,7 +48,7 @@ with open("/container_data/new-file",'a+',encoding="utf8") as resource:
      resource.close()
      
 Run Image:
-$ docker run \
+$ docker run --rm \
     --name opencv_rep_less \
     --mount source=host_data_source,destination=/container_data \
     -it jekshmek/opencv_rep python /container_data/test_create.py
