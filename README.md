@@ -20,7 +20,7 @@ Check xhost:
 $ sudo apt-get install x11-xserver-utils
 $ xhost +
 
-$ docker run --rm -it --env DISPLAY=$DISPLAY --privileged \
+$ docker run --rm --env DISPLAY=$DISPLAY --privileged \
     --volume /tmp/.X11-unix:/tmp/.X11-unix --env NO_AT_BRIDGE=1 \
     --name opencv_rep_less -it jekshmek/opencv_rep python camera.py 2> .log_error
     
