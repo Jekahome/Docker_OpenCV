@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import cv2 
- 
-print(cv2.__version__)
+from platform import python_version
+import cv2
+print('OpenCV',cv2.__version__)
+print('Python',python_version())
