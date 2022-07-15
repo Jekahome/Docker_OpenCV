@@ -30,14 +30,16 @@ Second run:
 #### Use mount
 
 ```
-Create mount:
-$ docker volume create \
-    --name host_data_source \
-    --opt type=bind \
-    --opt device=/home/jeka/Projects/OpenCV/less/source \
-    --opt o=bind
+$cd <ABSOLUTE PATH YOUR PROJECT DIR>
 
-File /home/jeka/Projects/OpenCV/less/source/test_create.py:
+Create mount:
+    $ docker volume create \
+        --name host_data_source \
+        --opt type=bind \
+        --opt device=<ABSOLUTE PATH YOUR PROJECT DIR>/source \
+        --opt o=bind
+
+File <ABSOLUTE PATH YOUR PROJECT DIR>/source/test_create.py:
     ```
     #!/usr/bin/python
     # -*- coding: utf-8 -*-
@@ -48,10 +50,10 @@ File /home/jeka/Projects/OpenCV/less/source/test_create.py:
          resource.close()
     ```
 
-$ docker run --rm \
-    --name opencv_rep_less \
-    --mount source=host_data_source,destination=/container_data \
-    -it jekshmek/opencv_rep python /container_data/test_create.py
+    $ docker run \
+        --name opencv_rep_less \
+        --mount source=host_data_source,destination=/container_data \
+        -it jekshmek/opencv_rep python /container_data/test_create.py
 
 ```
 
