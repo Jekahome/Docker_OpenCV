@@ -28,7 +28,7 @@ Second run:
 #### Use mount
 
 ```
-$cd <ABSOLUTE PATH YOUR PROJECT DIR>
+$ cd <ABSOLUTE PATH YOUR PROJECT DIR>
 
 Create mount:
 $ docker volume create \
