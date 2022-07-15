@@ -16,7 +16,7 @@ try:
     while rval: 
         cv2.imshow(title, frame) 
         rval, frame = vc.read() 
-        key = cv2.waitKey(20) & 0xFF
+        key = cv2.waitKey(0) & 0xFF
         if key == 27: # exit on ESC break 
             vc.release()
             cv2.destroyWindow(title)
