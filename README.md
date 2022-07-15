@@ -13,6 +13,13 @@ $ docker run --rm --name opencv_rep_less -it jekshmek/opencv_rep python test_scr
 
 #### Run camera:
 ```
+Check xhost:
+$ sudo apt-get install x11-xserver-utils
+$ xhost +localhost
+
+Check ENV DISPLAY in host machine:
+$ export DISPLAY=localhost:0.0
+
 $ docker run --rm -it --env DISPLAY=$DISPLAY  --privileged \
     --volume /tmp/.X11-unix:/tmp/.X11-unix \
     --name opencv_rep_less -it jekshmek/opencv_rep
@@ -22,6 +29,28 @@ First run:
 
 Second run:
     $ python camera.py 
+
+Help:
+
+https://community.hpe.com/t5/System-Administration/xhost-error-unable-to-open-display/m-p/3597993#M232451
+
+    possibility is that you are trying to run "xhost" before actually getting into X on your local machine.
+
+    machine$ # Get into X windows.
+    localmachine$ xterm &
+    localmachine-xterm$ echo $DISPLAY
+
+    if none of above, then do following to setup the DISPLAY variable.
+    localmachine-xterm$ export DISPLAY="localmachine:0.0"
+
+    localmachine-xterm$ xhost +remotehost
+    "remotehost" added to access list.
+
+    localmachine-xterm$ telnet remotehost
+    ## Log into remote host
+
+    remotehost$ export DISPLAY="localmachine:0.0"
+    remotehost$ xterm
 
 ```
 
