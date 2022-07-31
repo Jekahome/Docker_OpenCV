@@ -1,7 +1,7 @@
 # Install OpenCV from repositories https://techcave.ru/posts/43-ustanovka-opencv-na-ubuntu-ili-debian.html
 # ###################################
 # Libraries:
-# - OpenCV 4.6.0
+# - OpenCV 4.5.5
 # - Python 3.10.4
 # - GStreamer
 # - easyocr
