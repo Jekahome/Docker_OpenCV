@@ -35,7 +35,7 @@ RUN apt-get install -y libopencv-dev python3-opencv python3-tk
  
 RUN python -mpip install -U matplotlib 
 
-RUN python -mpip install -U imutils pytesseract 
+RUN python -mpip install -U imutils   
   
 # Install ffmpeg
 RUN apt-get install -y ffmpeg 
