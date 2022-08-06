@@ -37,6 +37,16 @@ RUN python -mpip install -U matplotlib
 
 RUN python -mpip install -U imutils   
   
+
+RUN apt-get install -y build-essential cmake libboost-all-dev
+# apt-get install libgtk-3-dev
+RUN python -mpip install numpy  
+RUN python -mpip install scipy  
+RUN python -mpip install scikit-image  
+RUN python -mpip install dlib
+RUN python -mpip install face_recognition
+
+
 # Install ffmpeg
 RUN apt-get install -y ffmpeg 
 RUN apt-get install -y v4l-utils
